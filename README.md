@@ -65,7 +65,7 @@ Rust apps https://crates.io/crates/libscemu
 
 ## Usage
 ```
-SCEMU emulator for Shellcodes 0.4.0   32bits and 64bits
+SCEMU emulator for malware 0.7.10
 @sha0coder
 
 USAGE:
@@ -73,13 +73,14 @@ USAGE:
 
 FLAGS:
     -6, --64bits      enable 64bits architecture emulation
-    -e, --endpoint    perform communications with the endpoint, use tor or vpn!
+        --banzai      skip unimplemented instructions, and keep up emulating what can be emulated
     -h, --help        Prints help information
     -l, --loops       show loop interations, it is slow.
     -m, --memory      trace all the memory accesses read and write.
     -n, --nocolors    print without colors for redirectin to a file >out
     -r, --regs        print the register values in every step.
     -p, --stack       trace stack on push/pop
+    -t, --test        test mode
     -V, --version     Prints version information
     -v, --verbose     -vv for view the assembly, -v only messages, without verbose only see the api calls and goes
                       faster
@@ -93,8 +94,9 @@ OPTIONS:
     -i, --inspect <DIRECTION>          monitor memory like: -i 'dword ptr [ebp + 0x24]
     -M, --maps <PATH>                  select the memory maps folder
     -R, --reg <REGISTER1,REGISTER2>    trace a specific register in every step, value and content
+    -x, --script <SCRIPT>              launch an emulation script, see scripts_examples folder
     -s, --string <ADDRESS>             monitor string on a specific address
-
+    -T, --trace <TRACE_FILENAME>       output trace to specified file
 ```
 
 ## Some use cases
@@ -339,7 +341,3 @@ CppEhRecord {
 ```
 
 And here we have the error routine 0x4f96f4 and the filter 0x51068c
-
-
-
-

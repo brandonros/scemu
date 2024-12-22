@@ -1,0 +1,13 @@
+target/
+.gitconfig
+shellcodes32/
+shellcodes64/
+.DS_Store
+x
+*.swp
+*.idb
+test/
+scripts/scemu-output.txt
+scripts/scemu-errors.json
+scripts/node_modules/
+Cargo.lock
